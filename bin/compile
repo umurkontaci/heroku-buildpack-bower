@@ -12,5 +12,5 @@ mkdir -p "$BUILD_DIR/.heroku/node/"
 cd $BUILD_DIR
 export PATH="$BUILD_DIR/.heroku/node/bin":$PATH
 
-bower install --allow-root
+bower install --allow-root --config.storage.packages="$CACHE_DIR/packages" --config.storage.registry="$CACHE_DIR/registry" --config.storage.links="$CACHE_DIR/links"
 gulp deploy
