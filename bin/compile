@@ -3,5 +3,14 @@
 BUILD_DIR=$1
 
 cd $BUILD_DIR
+BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
+BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
-PATH="$BUILD_DIR/vendor/node/bin:$BUILD_DIR/bin:$BUILD_DIR/node_modules/.bin:$PATH" gulp
+mkdir -p "$BUILD_DIR/.heroku/node/"
+cd $BUILD_DIR
+export PATH="$BUILD_DIR/.heroku/node/bin":$PATH
+
+bower install --allow-root
+gulp
