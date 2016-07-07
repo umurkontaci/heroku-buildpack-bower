@@ -1,7 +1,7 @@
-# Heroku Buildpack Bower
+# Heroku Buildpack Gulp
 
 A simple buildpack, designed to run with the [multi buildpack](https://github.com/ddollar/heroku-buildpack-multi),
-which will run install bower and run `bower install`.
+and runs `gulp`.
 
 ## Usage
 
@@ -15,7 +15,7 @@ which will run install bower and run `bower install`.
 
    ```
    https://github.com/heroku/heroku-buildpack-nodejs
-   https://github.com/ejholmes/heroku-buildpack-bower
+   https://github.com/umurkontaci/heroku-buildpack-gulp
    ```
 
 3. Ensure that npm installs bower:
@@ -23,7 +23,7 @@ which will run install bower and run `bower install`.
    ```json
    {
      "dependencies": {
-       "bower": "latest"
+       "gulp": "latest"
      }
    }
    ```
