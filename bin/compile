@@ -13,4 +13,4 @@ cd $BUILD_DIR
 export PATH="$BUILD_DIR/.heroku/node/bin":$PATH
 
 bower install --allow-root
-gulp
+gulp deploy
