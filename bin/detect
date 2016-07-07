@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if [ -f $1/bower.json ]; then
-  echo "Bower buildpack"
+if [ -f $1/gulpfile.js ]; then
+  echo "Gulpfile"
 else
-  echo "No bower.json"
+  echo "No Gulpfile"
   exit 1
 fi
